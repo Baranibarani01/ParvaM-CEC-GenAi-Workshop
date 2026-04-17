@@ -1,0 +1,98 @@
+# Program to check palindrome numbers
+
+num = int(input("Enter a number: "))
+
+# Store original number
+original = num
+
+# Reverse the number
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num = num // 10
+
+# Check palindrome
+if original == reverse:
+    print("Palindrome number")
+else:
+    print("Not a palindrome number")
+
+    # Program to check palindrome (number or string)
+
+def is_palindrome(value):
+    # Convert to string for uniform checking
+    value_str = str(value)
+    
+    # Reverse the value
+    reverse = value_str[::-1]
+    
+    # Check palindrome
+    if value_str == reverse:
+        return True
+    else:
+        return False
+
+
+# Few-shot examples
+examples = ["121", "1234", "MALAYALAM", "HINDI"]
+
+for item in examples:
+    if is_palindrome(item):
+        print(f"{item} - is a palindrome")
+    else:
+        print(f"{item} - is not a palindrome")
+        Let’s solve it step by step:
+
+Total cupcakes baked on Monday = 120
+Cupcakes left on Tuesday = 45
+
+👉 Cupcakes sold:
+
+120 - 45 = 75
+
+👉 Each pack contains 4 cupcakes
+
+👉 Number of packs sold:
+
+75 ÷ 4 = 18 packs (with 3 cupcakes left)
+
+👦 As a 10-year-old
+
+Cloud computing is like keeping your games and photos in the sky instead of your computer.
+So even if your computer breaks, you can still get your stuff from anywhere using the internet.
+It’s like using Google Drive or watching videos online instead of saving everything on your device.
+
+🧑‍💼 As a skeptical CEO (security-focused)
+
+Cloud computing means storing data and running applications on remote servers managed by third-party providers instead of on-premise infrastructure.
+
+From a security standpoint:
+
+You’re trusting external vendors with sensitive data
+Risks include data breaches, misconfigurations, and compliance issues
+However, major providers offer strong encryption, access control, monitoring, and certifications
+
+Bottom line: it’s not inherently insecure—but it shifts responsibility. You gain scalability and cost efficiency, but must enforce strict governance, auditing, and vendor risk management.
+
+🎤 As a stand-up comedian
+
+Cloud computing… sounds like your data is floating around in the sky, right? ☁️
+
+Like:
+“Where are my files?”
+“Oh don’t worry, they’re… somewhere above Bangalore… chilling with the clouds.” 😂
+
+Basically, instead of your computer doing all the work, you make someone else’s computer do it.
+It’s like saying:
+“I don’t cook at home anymore… I use Swiggy—but for data.” 😄
+
+And when Wi-Fi goes down?
+Congratulations… your entire digital life just went on vacation 😭
+
+Generative AI helps create content like text, images, and code quickly, saving time and effort. It improves productivity by automating repetitive tasks and supporting creative work. It also enables personalization by generating tailored responses, recommendations, and experiences.
+
+A modern smartphone is a compact handheld device with a sleek touch interface, powerful processor, and internet connectivity. It allows communication, entertainment, navigation, and access to apps for almost every daily task. It also includes sensors, storage, and wireless features like Bluetooth and Wi-Fi for seamless use.
+
+Python is a widely used tool known for its simple and readable syntax that makes it easy to learn and use. It supports building applications, automating tasks, and working with various types of software projects. It also has a large community and many libraries that extend its capabilities.

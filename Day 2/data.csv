@@ -1,0 +1,15 @@
+Name,Age
+Akshay,24
+Ajay,23
+Jay,35
+Akash,26 
+Vikas,33 
+
+
+dept.csv:
+Dept,Salary
+Dev,15000
+Dev,18000
+QA,13000
+Dev,20000
+QA,16000
