@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block title %}Student Details | ParvaM Auth{%
+endblock %} {% block content %}
+<div class="text-center mb-4">
+  <h2 class="fw-bold">Student Details</h2>
+  <p class="text-white-75">Review and manage this student record.</p>
+</div>
+<div class="p-4 bg-white rounded-4 text-dark shadow-sm mb-4">
+  <dl class="row mb-0">
+    <dt class="col-sm-4">Full Name</dt>
+    <dd class="col-sm-8">{{ student.full_name }}</dd>
+
+    <dt class="col-sm-4">Email</dt>
+    <dd class="col-sm-8">{{ student.email }}</dd>
+
+    <dt class="col-sm-4">Phone</dt>
+    <dd class="col-sm-8">{{ student.phone }}</dd>
+
+    <dt class="col-sm-4">Course</dt>
+    <dd class="col-sm-8">{{ student.course }}</dd>
+
+    <dt class="col-sm-4">Year</dt>
+    <dd class="col-sm-8">{{ student.year }}</dd>
+
+    <dt class="col-sm-4">Address</dt>
+    <dd class="col-sm-8">{{ student.address or 'N/A' }}</dd>
+
+    <dt class="col-sm-4">Registered On</dt>
+    <dd class="col-sm-8">{{ student.created_at }}</dd>
+  </dl>
+</div>
+<div class="d-grid gap-2">
+  <a
+    href="{{ url_for('student_edit', student_id=student.id) }}"
+    class="btn btn-primary btn-lg"
+    >Edit Student</a
+  >
+  <form
+    action="{{ url_for('student_delete', student_id=student.id) }}"
+    method="post"
+  >
+    <button type="submit" class="btn btn-danger btn-lg">Delete Student</button>
+  </form>
+  <a href="{{ url_for('student_list') }}" class="btn btn-outline-light btn-lg"
+    >Back to Students</a
+  >
+</div>
+{% endblock %}

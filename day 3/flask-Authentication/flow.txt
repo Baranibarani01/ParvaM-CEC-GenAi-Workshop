@@ -1,0 +1,2 @@
+cd Flask-Authentication
+python app.py

@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block title %}Dashboard | ParvaM Auth{% endblock %}
+{% block content %}
+<div class="text-center mb-4">
+  <h2 class="fw-bold">Dashboard</h2>
+  <p class="text-white-75">
+    Welcome, {{ user_name }}. Your authentication flow is active.
+  </p>
+</div>
+<div class="row g-4">
+  <div class="col-12">
+    <div class="p-4 bg-white rounded-4 text-dark shadow-sm">
+      <h5>Account Summary</h5>
+      <p class="mb-0">
+        Your session is secure and your email/phone are protected with
+        SQLite-backed storage.
+      </p>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="p-4 bg-white rounded-4 text-dark shadow-sm">
+      <h5>Student Registration</h5>
+      <p class="mb-0">
+        Create, view, update and delete student records from the same secure
+        dashboard.
+      </p>
+    </div>
+  </div>
+  <div class="col-12 d-grid gap-2">
+    <a href="{{ url_for('student_list') }}" class="btn btn-primary btn-lg"
+      >Manage Students</a
+    >
+    <a href="{{ url_for('logout') }}" class="btn btn-outline-light btn-lg"
+      >Logout</a
+    >
+  </div>
+</div>
+{% endblock %}

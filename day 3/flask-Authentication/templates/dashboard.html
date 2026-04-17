@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block title %}Dashboard | ParvaM Auth{% endblock %}
+{% block content %}
+<div class="text-center mb-4">
+  <h2 class="fw-bold">Dashboard</h2>
+  <p class="text-muted">
+    Welcome, {{ user.name }}. Your authentication flow is active.
+  </p>
+</div>
+<div class="row g-4">
+  <div class="col-12">
+    <div class="p-4 bg-white rounded-4 text-dark shadow-sm">
+      <h5>Account Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover mb-0">
+          <tbody>
+            <tr>
+              <th scope="row" class="w-25">Name</th>
+              <td>{{ user.name }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Email</th>
+              <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Phone</th>
+              <td>{{ user.phone }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Member since</th>
+              <td>{{ user.created_at }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 d-grid gap-2">
+    <a href="{{ url_for('student_list') }}" class="btn btn-primary btn-lg"
+      >Manage Students</a
+    >
+    <a href="{{ url_for('logout') }}" class="btn btn-outline-primary btn-lg"
+      >Logout</a
+    >
+  </div>
+</div>
+{% endblock %}

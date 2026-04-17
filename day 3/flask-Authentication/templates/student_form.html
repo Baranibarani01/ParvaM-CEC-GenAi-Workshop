@@ -1,0 +1,83 @@
+{% extends 'base.html' %} {% block title %}{{ action }} | ParvaM Auth{% endblock
+%} {% block content %}
+<div class="text-center mb-4">
+  <h2 class="fw-bold">{{ action }}</h2>
+  <p class="text-white-75">Use the form below to {{ action | lower() }}.</p>
+</div>
+<form method="POST" novalidate>
+  <div class="mb-3">
+    <label class="form-label text-white">Full Name</label>
+    <input
+      type="text"
+      name="full_name"
+      class="form-control form-control-lg"
+      value="{{ form.full_name }}"
+      placeholder="Jane Doe"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label text-white">Email address</label>
+    <input
+      type="email"
+      name="email"
+      class="form-control form-control-lg"
+      value="{{ form.email }}"
+      placeholder="jane@student.com"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label text-white">Phone Number</label>
+    <input
+      type="text"
+      name="phone"
+      class="form-control form-control-lg"
+      value="{{ form.phone }}"
+      placeholder="0123456789"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label text-white">Course</label>
+    <input
+      type="text"
+      name="course"
+      class="form-control form-control-lg"
+      value="{{ form.course }}"
+      placeholder="Computer Science"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label text-white">Year</label>
+    <input
+      type="text"
+      name="year"
+      class="form-control form-control-lg"
+      value="{{ form.year }}"
+      placeholder="2026"
+      required
+    />
+  </div>
+  <div class="mb-4">
+    <label class="form-label text-white">Address</label>
+    <textarea
+      name="address"
+      class="form-control form-control-lg"
+      rows="3"
+      placeholder="Student address"
+    >
+{{ form.address }}</textarea
+    >
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+    {{ submit_label }}
+  </button>
+  <a
+    href="{{ url_for('student_list') }}"
+    class="btn btn-outline-light btn-lg w-100"
+    >Back to Students</a
+  >
+</form>
+{% endblock %}
